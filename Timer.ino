@@ -3,7 +3,7 @@
 int contador = 0;
 
 ISR (TIMER0_OVF_vect) {
-  if (contador > 61) {
+  if (contador >= 61) {
     PORTD ^= (1 << LED); // inverte o estado do LED
     contador = 0;
   }
